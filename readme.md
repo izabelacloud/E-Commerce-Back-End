@@ -1,5 +1,7 @@
 # E-Commerce Back End 
 
+![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
+
 ## Description
 
 The E-Commerce Backend application contains routes to APIs to create, get, update and delete categories, products and tags. This application is using Sequelize, MYSQL along with Express.js and Node.js.
