@@ -7,24 +7,21 @@ router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
   Tag.findAll({
-    include: [{
-      model: Product,
-      attributes: ['id', 'product_name'],
-      through: ProductTag,
-      as: 'product_tags'
-    }]
-
+    include: [
+      {
+        model: Product,
+        attributes: ['id', 'product_name', 'price', 'stock'],
+        through: ProductTag,
+        as: 'products'
+      }
+    ]
   })
   .then(dbTagData => {
-    if(!dbTagData) {
-        res.status(404).json({message: "No tag found with this id"});
-        return;
-    }
-    res.json(dbTagData);
+    res.json(dbTagData)
   })
   .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+    console.log(err);
+    res.status(500).json(err)
   })
 });
 
@@ -35,12 +32,14 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    include: [{
-      model: Product,
-      attributes: ['id', 'tag_id'],
-      through: ProductTag,
-      as: 'product_tags'
-    }]
+    include: [
+      {
+        model: Product,
+        attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+        through: ProductTag,
+        as: 'products'
+      }
+    ]
 
   })
   .then(dbTagData => {
