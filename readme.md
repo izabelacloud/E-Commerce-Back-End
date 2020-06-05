@@ -18,7 +18,7 @@ The E-Commerce Backend application contains routes to APIs to create, get, updat
 
 ## Deployed Application 
 
-[E-Commerce Backend Code Walk-through Video](https://drive.google.com/file/d/1Ys-jU9H36k8Sd6xUnRPagm5deNI-uILl/view)
+[E-Commerce Backend Code Walk-through Video](https://drive.google.com/file/d/1Ys-jU9H36k8Sd6xUnRPagm5deNI-uILl/view)<br />
 [E-Commerce Backend API Testing Walk-through Video](https://drive.google.com/file/d/1sCCsLDmHR7breJpxQVJTuSjVHqZi_j3o/view)
 
 
